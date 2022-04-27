@@ -13,9 +13,8 @@ class FileWatchingService {
 
     fun poll() {
         val watchService: WatchService = FileSystems.getDefault().newWatchService()
-        val path = Paths.get(DIRECTORY_PATH)
-        println(path.toAbsolutePath())
-        path.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY)
+        Paths.get(DIRECTORY_PATH)
+            .register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY)
         while (true) {
             val watchKey = watchService.poll()
             if (watchKey != null) {
