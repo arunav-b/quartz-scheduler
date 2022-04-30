@@ -10,4 +10,4 @@ pluginManagement {
         id(quarkusPluginId) version quarkusPluginVersion
     }
 }
-rootProject.name="scheduler-file-watcher"
+rootProject.name = "scheduler-file-watcher"
